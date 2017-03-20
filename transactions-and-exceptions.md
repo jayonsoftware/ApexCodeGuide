@@ -1,4 +1,8 @@
-```
+### Transactions and Exceptions
+
+Wrongo
+
+```java
     public static void AddRemoveWrong() {
         Balance__c balanceOne = [SELECT Name, Balance__c, Comment__c FROM Balance__c WHERE Name = 'JayOne'];
         Balance__c balanceTwo = [SELECT Name, Balance__c, Comment__c FROM Balance__c WHERE Name = 'JayTwo'];
@@ -10,7 +14,7 @@
         balanceTwo.Balance__c = balanceTwo.Balance__c - 2.00;
 
         // Comment__c is a requird field, it was created to simulate a DML Exception.
-        balanceOne.Comment__c = 'JayOne Added 2 Bucks';
+        balanceOne.Comment__c = 'JayTwo Added 2 Bucks to JayOne';
         balanceTwo.Comment__c = null;
 
         try {
@@ -33,7 +37,7 @@
 
 OK
 
-```
+```java
   public static void AddRemoveOk() {
         Balance__c balanceOne = [SELECT Name, Balance__c, Comment__c FROM Balance__c WHERE Name = 'JayOne'];
         Balance__c balanceTwo = [SELECT Name, Balance__c, Comment__c FROM Balance__c WHERE Name = 'JayTwo'];
@@ -68,9 +72,7 @@ OK
 
 Sample Code
 
-
-
-```apex
+```java
 public with sharing class TransactionsDemo {
     public static void AddRemoveCorrect() {
         Balance__c balanceOne = [SELECT Name, Balance__c, Comment__c FROM Balance__c WHERE Name = 'JayOne'];
@@ -83,7 +85,7 @@ public with sharing class TransactionsDemo {
         balanceTwo.Balance__c = balanceTwo.Balance__c - 2.00;
 
         // Comment__c is a requird field, it was created to simulate a DML Exception.
-        balanceOne.Comment__c = 'JayOne Added 2 Bucks';
+        balanceOne.Comment__c = 'JayTwo Added 2 Bucks to JayOne';
         balanceTwo.Comment__c = null;
 
         Savepoint sp = Database.setSavepoint();
@@ -110,11 +112,5 @@ public with sharing class TransactionsDemo {
     }
 ```
 
-
-
 next
-
-
-
-
 
