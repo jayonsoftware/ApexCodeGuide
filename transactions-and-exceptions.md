@@ -1,6 +1,6 @@
 ### Transactions and Exceptions
 
-Wrongo
+Wrong
 
 ```java
     public static void AddRemoveWrong() {
@@ -32,8 +32,6 @@ Wrongo
         System.debug(balanceTwo.Balance__c);
     }
 ```
-
-
 
 OK
 
