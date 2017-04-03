@@ -1,6 +1,4 @@
-## Apex Coding Guidelines V5
-
-
+## Apex Book
 
 [Apex Name Spaces](/name-spaces.md)
 
