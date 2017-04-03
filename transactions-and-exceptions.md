@@ -68,7 +68,7 @@ OK
     }
 ```
 
-Sample Code
+Best
 
 ```java
 public with sharing class TransactionsDemo {
@@ -112,5 +112,5 @@ public with sharing class TransactionsDemo {
 
 Credit
 
-@JayOnSoftware 
+@JayOnSoftware
 
