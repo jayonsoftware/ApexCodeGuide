@@ -1,3 +1,5 @@
+Apex does not provide namespaces <https://en.wikipedia.org/wiki/Namespace> so here are some thoughts on using Innert classes to achive the same. 
+
 ```java
 public with sharing class CustomerManagement {
     public class CustomerDto
